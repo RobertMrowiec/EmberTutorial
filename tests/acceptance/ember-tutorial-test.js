@@ -22,17 +22,14 @@ module('Acceptance | ember tutorial', function(hooks) {
     assert.equal(currentURL(), '/contact', 'should navigate to contact page')
   });
   
-  test('should list available rentals.', async function (assert) {
+  test('should list available rentals.', async function (assert) {    
+    await visit('/')
+    assert.equal(this.element.querySelectorAll('.listing').length, 3, 'should display 3 rentals')
   });
 
   test('should filter the list of rentals by city.', async function (assert) {
   });
 
   test('should show details for a selected rental', async function (assert) {
-  });
-
-  test('visiting /', async function(assert) {
-    await visit('/');
-    assert.equal(currentURL(), '/');
   });
 });
