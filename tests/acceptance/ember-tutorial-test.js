@@ -1,9 +1,11 @@
 import { module, test } from 'qunit';
 import { click, currentURL, visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 
 module('Acceptance | ember tutorial', function(hooks) {
   setupApplicationTest(hooks);
+  setupMirage(hooks)
 
   test('should show rentals as the home page', async function (assert) {
     await visit('/')
@@ -27,9 +29,9 @@ module('Acceptance | ember tutorial', function(hooks) {
     assert.equal(this.element.querySelectorAll('.listing').length, 3, 'should display 3 rentals')
   });
 
-  test('should filter the list of rentals by city.', async function (assert) {
+  test('should filter the list of rentals by city.', async function () {
   });
 
-  test('should show details for a selected rental', async function (assert) {
+  test('should show details for a selected rental', async function () {
   });
 });

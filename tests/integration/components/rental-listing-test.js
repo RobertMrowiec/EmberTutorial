@@ -4,10 +4,11 @@ import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
-module('Integration | Component | rental-listing', function(hooks) {
+
+module('Integration | Component | rental listing', hooks => {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(() => {
+  hooks.beforeEach(function (){
     this.rental = EmberObject.create({
       image: 'fake.png',
       title: 'test-title',
@@ -16,7 +17,7 @@ module('Integration | Component | rental-listing', function(hooks) {
       city: 'test-city',
       bedrooms: 3
     });
-  })
+  });
 
   test('should display rental details', async function(assert) {
     await render(hbs`<RentalListing @rental={{this.rental}} />`);
