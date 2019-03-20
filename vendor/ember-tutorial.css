@@ -374,3 +374,17 @@ p {
   position: relative;
   top: -50px;
 }
+
+.titleBack {
+  display: grid;
+}
+
+.titleGrid {
+  width: 700px;
+  grid-column-end: 1;
+}
+
+.titleBackButton {
+  width: 117px;
+  margin-top: 5px;
+}

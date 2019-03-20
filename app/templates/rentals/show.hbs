@@ -1,5 +1,12 @@
 <div class="jumbo show-listing">
-  <h2 class="title">{{this.model.title}}</h2>
+  <div class='titleBack'>
+    {{!-- <div class='titleGrid'> --}}
+      <h2 class="title titleGrid">{{this.model.title}}</h2>
+    {{!-- </div> --}}
+    <div class='titleBackButton'>
+      {{#link-to "rentals" class='button titleBackButton'}} Go back {{/link-to}}
+    </div>
+  </div>
   <div class="content">
     <div>
       <img src={{this.model.image}} class="rental-pic" alt="Picture of {{this.model.title}}">
